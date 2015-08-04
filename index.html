@@ -1,0 +1,70 @@
+<html ng-app="masocial">
+<head>
+<link rel="icon" type="icon.png">
+<meta charset="UTF-8">
+  <title>MAsocial</title>
+
+  <header class="action-bar fixed-top">
+      <a class="app-icon action up" data-transition="pop">
+        
+        <i class="icon-globe"></i>
+      </a>
+      <h2 class="title">MA Social - Publicar <span class="subtitle">Faça parte do nosso projeto .. </span></h2>
+    </header>
+
+  <script type="text/javascript"src="js/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="js/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/js.js"></script>
+
+  <link rel="stylesheet" href="css/fries/dist/themes/holo-dark/holo-dark.min.css">
+
+
+  <style>
+      *:not(input):not(textarea){
+        -webkit-user-select:none;
+        -webkit-touch-collout:none;
+      }
+  </style>
+
+</head>
+
+<body ng-controller="ctrl">
+
+
+
+<nav class="tab-fixed">
+<ul class="tab-inner">
+  <li class="active"><a href="index.html" data-ignore="true"><i class="icon-view-as-list"></i></a></li>
+  <li><a href="postagens.html" data-ignore="true"><i class="icon-group"></i></a></li>
+</ul>
+</nav>
+
+<div class="content">
+        <ul class="list inset">
+           <li class="list-divider">Faça a sua publicação !</li>
+           <br/>
+          
+        <form class="form-flex">
+            <label class="block-label">Nome Completo</label>
+            <div class="flex-group">
+              <input type="text" class="input-text flex1" placeholder="Nome" id="nome">
+                <input type="text" class="input-text flex1" placeholder="Sobrenome" id="sobrenome">
+            </div>
+        </form>
+      <br>
+      <label class="block-label">Sua Publicação</label>
+          <div class="flex-group">
+            <input type="text" class="input-text flex2" placeholder="Titulo" id="titulo"><input type="text" class="input-text flex2" placeholder="Post" id="post" >
+           
+          </div>
+      <br>
+          
+            <center><input type="submit" id="upload" value="Postar !" class="btn" title="Next" data-transition="push" id="upload"></input></center>
+          
+        </ul>
+</div>
+
+</body>
+</html>

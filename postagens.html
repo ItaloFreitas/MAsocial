@@ -1,0 +1,75 @@
+<html ng-app="masocial">
+<head>
+<meta charset="UTF-8">
+  <title>MAsocial</title>
+
+  <script type="text/javascript"src="js/bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="js/bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/js.js"></script>
+
+  <link rel="stylesheet" href="css/fries/dist/themes/holo-dark/holo-dark.min.css">
+
+  <style>
+      *:not(input):not(textarea){
+        -webkit-user-select:none;
+        -webkit-touch-collout:none;
+      }
+      .content{
+        -webkit-user-select:none;
+        -webkit-touch-collout:none;
+      }
+  </style>
+
+</head>
+
+<body ng-controller="ctrl">
+
+<header class="action-bar fixed-top">
+      <a ng-click="enviar()" class="app-icon action up" data-transition="pop">
+        
+        <i class="icon-refresh"></i>
+      </a>
+      <h2 class="title">MA Social - Publicações <span class="subtitle">Clique para ver as publicações .. </span></h2>
+    </header>
+
+<nav class="tab-fixed">
+<ul class="tab-inner">
+<li><a href="index.html" data-ignore="true"><i class="icon-view-as-list"></i></a></li>
+<li class="active"><a href="postagens.html" data-ignore="true"><i class="icon-group"></i></a></li></li>
+
+</ul>
+</nav>
+
+<div class="content">
+        <ul class="list inset">
+           <li class="list-divider">Postagens</li>
+       
+
+<li class="list-item-multi-line selectable" >
+        <a data-ignore="true" ng-repeat="item in dados" >
+          <h4>{{item.nome}} {{item.sobrenome}}</h4>
+          <h6>{{item.titulo}}</h6>
+          <p>{{item.post}}</p>
+              <br>
+        </a>
+
+</li>
+     
+
+ </ul>
+</div>
+	
+
+  <ng-view>
+               
+ 
+  </ng-view>
+</body>
+</html>
+
+
+
+
+
